@@ -7,18 +7,6 @@
 import re
 from setuptools import setup
 
-
-#version = re.search(
-#    '^__version__\s*=\s*"(.*)"',
-#    open('donors/donors.py').read(),
-#    re.M
-#    ).group(1)
-
-
-#with open("README.rst", "rb") as f:
-#    long_descr = f.read().decode("utf-8")
-
-
 setup(
     name = "cmdline-donors-project",
     packages = ["donors"],
