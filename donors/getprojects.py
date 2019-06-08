@@ -1,16 +1,12 @@
-#get project details 
-
 import sqlite3
 import requests
 import configparser
 import logging
 import googlemaps
-#from prettytable import from_db_cursor
 
 def getprojectdetails(getprojectszip):
-    #print(f'printing row id {getprojectszip}')
+    
     userid = getprojectszip
-    #print(userid)
     
     logging.basicConfig(filename = 'app.log', level = logging.INFO)
     
@@ -25,25 +21,21 @@ def getprojectdetails(getprojectszip):
     try:
         c.execute('SELECT zipcode FROM USERS WHERE rowid=?', (userid,))
         get_zipcode = c.fetchone()
-        #print(type(get_zipcode))
-        #print(get_zipcode)
-        
     except TypeError as e:
-        #print("Please provide a valid user id")
         logging.exception(str(e))
         
     if get_zipcode == None:
         print("Please provide a valid user id")
 
     if get_zipcode != None:
-        print("Donors Proposals near user")
-        config = configparser.ConfigParser()
+        print("Donors Proposals near user....")
+        
+	config = configparser.ConfigParser()
         config.read("config.ini")
         google_api_key = config['KEYS']['google_places_api_key']
         donors_api_key = config['KEYS']['donors_api_key']
-    #print(donors_api_key)
         donors_api = "https://api.donorschoose.org/common/json_feed.html?zip=" + str(get_zipcode[0]) + "&" + "APIKey=" + donors_api_key
-        #print(donors_api)
+        
         r = requests.get(donors_api)
         jforson = r.json()
         
