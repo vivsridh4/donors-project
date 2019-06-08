@@ -29,8 +29,7 @@ def getprojectdetails(getprojectszip):
 
     if get_zipcode != None:
         print("Donors Proposals near user....")
-        
-	config = configparser.ConfigParser()
+        config = configparser.ConfigParser()
         config.read("config.ini")
         google_api_key = config['KEYS']['google_places_api_key']
         donors_api_key = config['KEYS']['donors_api_key']
