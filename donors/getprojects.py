@@ -60,7 +60,7 @@ def getprojectdetails(getprojectszip):
             print("City:            ---",biglist[2])
             for distro in geocode_result:
                 googlemaps_intgrated = googlemaps_var + distro['place_id']
-                print("Google MAps URL: ---",googlemaps_intgrated)
+                print("Google Maps URL: ---",googlemaps_intgrated)
                 print("lat:             ---",distro['geometry']['location']['lat'])
                 print("lng:             ---",distro['geometry']['location']['lng'])
             print("Proposal URL:    ---",biglist[0],'\n')
