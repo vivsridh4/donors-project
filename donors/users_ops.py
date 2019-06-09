@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
-"""donors.users: user operations module to create users or list users within the donors project package."""
+"""donors.users_ops: user operations module to create users or list users within the donors project package."""
 import sqlite3
 
-#from donors.list_users import *
+
 from validate_email import validate_email
 from prettytable import from_db_cursor
 
@@ -22,7 +21,7 @@ def users_ops(options):
         
         fullname = input('Please enter your Full Name: ')
         email = input('Please provide a valid Email:')
-        zipcode = int(input('We need your Zip Code to connect you to projects near you:'))
+        zipcode = int(input('Please provide a valid Zip Code to search a project near user:'))
         
         is_valid = validate_email(email)
         
@@ -51,6 +50,4 @@ def users_ops(options):
         print(x)  
         
         conn.close()
-        #list_users()
-        #print("list users")
     
