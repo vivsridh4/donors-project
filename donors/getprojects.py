@@ -40,15 +40,15 @@ def getprojectdetails(getprojectszip):
         
         gmaps = googlemaps.Client(key=google_api_key)
         
-        for d in jforson["proposals"]:
+        for field in jforson["proposals"]:
             biglist=[]
-            for k, v in d.items():
-                if k=="schoolName":
-                    biglist.append(v)
-                if k=="city":
-                    biglist.append(v)
-                if k=="proposalURL":
-                    biglist.append(v)
+            for key, value in field.items():
+                if key=="schoolName":
+                    biglist.append(value)
+                if key=="city":
+                    biglist.append(value)
+                if key=="proposalURL":
+                    biglist.append(value)
                 else:
                     pass
 
