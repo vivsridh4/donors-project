@@ -45,7 +45,7 @@ def users_ops(options):
         conn.commit()
         
         with conn:
-            c.execute('SELECT rowid,username,email,zipcode FROM USERS')   
+            c.execute('SELECT rowid as userid,username,email,zipcode FROM USERS')   
             x = from_db_cursor(c)   
         print(x)  
         
