@@ -3,10 +3,13 @@ import sqlite3,logging
 
 from validate_email import validate_email
 from prettytable import from_db_cursor
+from donors.db import db_enabler
 
 def users_ops(options):
     
-    conn = sqlite3.connect('donorsproject.db')
+    DB_PATH = db_enabler()
+    
+    conn = sqlite3.connect(DB_PATH)
     connect = conn.cursor()
 
     connect.execute('''CREATE TABLE IF NOT EXISTS USERS
@@ -38,7 +41,9 @@ def users_ops(options):
     
     if user_option=="list":
         
-        conn = sqlite3.connect('donorsproject.db')
+        DB_PATH = db_enabler()
+        
+        conn = sqlite3.connect(DB_PATH)
         connect = conn.cursor()
         
         connect.execute('''CREATE TABLE IF NOT EXISTS USERS

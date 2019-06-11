@@ -1,12 +1,15 @@
 import sqlite3,requests,configparser,logging,googlemaps
 from prettytable import from_db_cursor
+from donors.db import db_enabler
 
 def getprojectdetails(getprojectszip):
     userid = getprojectszip
     
     logging.basicConfig(filename = 'app.log', level = logging.INFO)
     
-    conn = sqlite3.connect('donorsproject.db')
+    DB_PATH = db_enabler()
+    
+    conn = sqlite3.connect(DB_PATH)
     connect = conn.cursor()
         
     connect.execute('''CREATE TABLE IF NOT EXISTS USERS
