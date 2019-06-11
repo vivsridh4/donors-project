@@ -7,6 +7,7 @@ import sys
 import click
 from donors.users_ops import users_ops
 from donors.getprojects import getprojectdetails
+from donors.config_file_handler import config_check
 
 
 @click.command()
@@ -16,9 +17,16 @@ from donors.getprojects import getprojectdetails
 
 def main(user,getprojects):
     if user:
-        users_ops(user)
+        is_config = config_check()
+        if is_config:
+            users_ops(user)
+        else:
+            print("Please add valid keys in config.ini")
     if getprojects:
-        getprojectdetails(getprojects)
-    
+        is_config = config_check()
+        if is_config:
+            getprojectdetails(getprojects)
+        else:
+            print("Please add valid keys in config.ini")
     
  

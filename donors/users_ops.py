@@ -1,6 +1,6 @@
 """donors.users_ops: user operations module to create users or list users within the donors project package."""
 import sqlite3
-
+import logging
 
 from validate_email import validate_email
 from prettytable import from_db_cursor
@@ -21,17 +21,22 @@ def users_ops(options):
         
         fullname = input('Please enter your Full Name: ')
         email = input('Please provide a valid Email:')
-        zipcode = int(input('Please provide a valid Zip Code to search a project near user:'))
-        
         is_valid = validate_email(email)
+        zipcode = input('Please provide a valid Zip Code to search a project near user:')
         
-        if is_valid == True:
+        is_zipcode_valid=zipcode.isdigit()
+        
+        if is_valid == False:
+            print("Please provide a valid email address")
+            #print("Please provide valid zip code")
+        elif is_zipcode_valid == False:
+            #print("Please provide a valid email address")
+            print("Please provide valid zip code")
+        else:
             c.execute("INSERT INTO USERS VALUES(?, ?, ?)", (fullname,email,zipcode))
             conn.commit()
             print("Saving user details to a databases......")
-        else:
-            print("Please provide a valid email address")
-    
+        
     conn.close()
     
     if user_option=="list":
@@ -45,7 +50,7 @@ def users_ops(options):
         conn.commit()
         
         with conn:
-            c.execute('SELECT rowid as userid,username,email,zipcode FROM USERS')   
+            c.execute('SELECT rowid as USERID,username as USERNAME,email as EMAIL,zipcode as ZIPCODE FROM USERS')   
             x = from_db_cursor(c)   
         print(x)  
         
