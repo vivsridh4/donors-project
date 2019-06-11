@@ -1,10 +1,4 @@
-#get project details 
-
-import sqlite3
-import requests
-import configparser
-import logging
-import googlemaps
+import sqlite3,requests,configparser,logging,googlemaps
 from prettytable import from_db_cursor
 
 def getprojectdetails(getprojectszip):

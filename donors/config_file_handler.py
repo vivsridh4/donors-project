@@ -23,7 +23,3 @@ def config_check():
         config_check_validation = True
     
     return config_check_validation
-        
-#if __name__ == "__main__":
-#    test = config_check()
-#    print(test)

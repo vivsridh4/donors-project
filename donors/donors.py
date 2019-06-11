@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 """donors.donors: provides entry point main()."""
 
 import sys

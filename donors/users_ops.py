@@ -8,9 +8,9 @@ from prettytable import from_db_cursor
 def users_ops(options):
     
     conn = sqlite3.connect('donorsproject.db')
-    c = conn.cursor()
+    connect = conn.cursor()
 
-    c.execute('''CREATE TABLE IF NOT EXISTS USERS
+    connect.execute('''CREATE TABLE IF NOT EXISTS USERS
              (username text, email text, zipcode integer)''')
 
     conn.commit()
@@ -33,7 +33,7 @@ def users_ops(options):
             #print("Please provide a valid email address")
             print("Please provide valid zip code")
         else:
-            c.execute("INSERT INTO USERS VALUES(?, ?, ?)", (fullname,email,zipcode))
+            connect.execute("INSERT INTO USERS VALUES(?, ?, ?)", (fullname,email,zipcode))
             conn.commit()
             print("Saving user details to a databases......")
         
@@ -42,17 +42,17 @@ def users_ops(options):
     if user_option=="list":
         
         conn = sqlite3.connect('donorsproject.db')
-        c = conn.cursor()
+        connect = conn.cursor()
         
-        c.execute('''CREATE TABLE IF NOT EXISTS USERS
+        connect.execute('''CREATE TABLE IF NOT EXISTS USERS
              (username text, email text, zipcode integer)''')
 
         conn.commit()
         
         with conn:
-            c.execute('SELECT rowid as USERID,username as USERNAME,email as EMAIL,zipcode as ZIPCODE FROM USERS')   
-            x = from_db_cursor(c)   
-        print(x)  
+            connect.execute('SELECT rowid as USERID,username as USERNAME,email as EMAIL,zipcode as ZIPCODE FROM USERS')   
+            list_users = from_db_cursor(connect)   
+        print(list_users)  
         
         conn.close()
     
