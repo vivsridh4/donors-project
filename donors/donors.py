@@ -1,7 +1,6 @@
 """donors.donors: provides entry point main()."""
 
-import sys
-import click
+import sys,click
 from donors.users_ops import users_ops
 from donors.getprojects import getprojectdetails
 from donors.config_file_handler import config_check
@@ -9,7 +8,7 @@ from donors.config_file_handler import config_check
 
 @click.command()
 @click.option("--user","-u",help='donors cli project users operations: Create Users or List Users',type=click.Choice(['create', 'list']))
-@click.option("--getprojects","-gp",help='list all projects based on user id(Row-ID from Table), get user id details from --user list',type=int)
+@click.option("--getprojects","-gp",help='list all projects near user. Need valid USER ID as an argument which can be obtained by $donors -u list',type=int)
 
 
 def main(user,getprojects):
