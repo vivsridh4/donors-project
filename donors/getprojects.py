@@ -7,16 +7,16 @@ def getprojectdetails(getprojectszip):
     logging.basicConfig(filename = 'app.log', level = logging.INFO)
     
     conn = sqlite3.connect('donorsproject.db')
-    c = conn.cursor()
+    connect = conn.cursor()
         
-    c.execute('''CREATE TABLE IF NOT EXISTS USERS
+    connect.execute('''CREATE TABLE IF NOT EXISTS USERS
              (username text, email text, zipcode integer)''')
 
     conn.commit()
     
     try:
-        c.execute('SELECT zipcode FROM USERS WHERE rowid=?', (userid,))
-        get_zipcode = c.fetchone()
+        connect.execute('SELECT zipcode FROM USERS WHERE rowid=?', (userid,))
+        get_zipcode = connect.fetchone()
         
     except TypeError as e:
         logging.exception(str(e))
@@ -24,9 +24,9 @@ def getprojectdetails(getprojectszip):
     if get_zipcode == None:
         print("Please choose a valid user id from below:",'\n')
         with conn:
-            c.execute('SELECT rowid as USERID,username as USERNAME,email as EMAIL,zipcode as ZIPCODE FROM USERS')   
-            x = from_db_cursor(c)   
-        print(x)  
+            connect.execute('SELECT rowid as USERID,username as USERNAME,email as EMAIL,zipcode as ZIPCODE FROM USERS')   
+            list_users = from_db_cursor(connect)   
+        print(list_users)  
     
     if get_zipcode != None:
         print("Donors Proposals near user")
@@ -37,12 +37,12 @@ def getprojectdetails(getprojectszip):
     
         donors_api = "https://api.donorschoose.org/common/json_feed.html?zip=" + str(get_zipcode[0]) + "&" + "APIKey=" + donors_api_key
         
-        r = requests.get(donors_api)
-        jforson = r.json()
+        request_donors_list = requests.get(donors_api)
+        donors_json = request_donors_list.json()
         
         gmaps = googlemaps.Client(key=google_api_key)
         
-        for field in jforson["proposals"]:
+        for field in donors_json["proposals"]:
             biglist=[]
             for key, value in field.items():
                 if key=="schoolName":
@@ -64,8 +64,6 @@ def getprojectdetails(getprojectszip):
                 
                 get_google_maps = requests.get(google_maps_integrated)
                 get_map_url = get_google_maps.json()
-                
-                get_map_url['result']['url']
                 
                 print("Google Maps URL: ---",get_map_url['result']['url'])
                 print("lat:             ---",get_map_url['result']['geometry']['location']['lat'])
