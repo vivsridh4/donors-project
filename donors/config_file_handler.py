@@ -6,7 +6,7 @@ def config_check():
     google_api_key = config['KEYS']['google_places_api_key']
     donors_api_key = config['KEYS']['donors_api_key']
     
-    config_check_validation = False
+    is_config_valid = False
     
     is_digit_check=google_api_key.isdigit()
     is_digit_check_donors_key = donors_api_key.isdigit()
@@ -20,6 +20,6 @@ def config_check():
     elif donors_api_key =="":
         print("Please provide a valid donors api key")
     else:
-        config_check_validation = True
+        is_config_valid = True
     
-    return config_check_validation
+    return is_config_valid
