@@ -11,11 +11,15 @@ def getprojectdetails(getprojectszip):
     
     conn = sqlite3.connect(DB_PATH)
     connect = conn.cursor()
+    
+    #Create a table if this is the first option used before creating database / tables.
         
     connect.execute('''CREATE TABLE IF NOT EXISTS USERS
              (username text, email text, zipcode integer)''')
 
     conn.commit()
+    
+    #Get zipcode of the user from database from user id provided by the user for --getprojects option.
     
     try:
         connect.execute('SELECT zipcode FROM USERS WHERE rowid=?', (userid,))
@@ -24,12 +28,16 @@ def getprojectdetails(getprojectszip):
     except TypeError as e:
         logging.exception(str(e))
         
+    #List all users if user id doesn't match 
+        
     if get_zipcode == None:
         print("Please choose a valid user id from below:",'\n')
         with conn:
             connect.execute('SELECT rowid as USERID,username as USERNAME,email as EMAIL,zipcode as ZIPCODE FROM USERS')   
             list_users = from_db_cursor(connect)   
         print(list_users)  
+        
+    #Connecting zipcode --> donors api --> get school details --> invoke google maps module to get place id using school details --> use place id to generate google maps url
     
     if get_zipcode != None:
         print("[Most Urgent] donors proposals near user",'\n')

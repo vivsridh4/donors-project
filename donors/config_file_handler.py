@@ -1,6 +1,9 @@
 import configparser
 
 def config_check():
+    
+    #Validate user has provided api key with valid details (check for empty string & integers)
+    
     config = configparser.ConfigParser()
     config.read("config.ini")
     google_api_key = config['KEYS']['google_places_api_key']
