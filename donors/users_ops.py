@@ -35,7 +35,7 @@ def users_ops(options):
         else:
             connect.execute("INSERT INTO USERS VALUES(?, ?, ?)", (fullname,email,zipcode))
             conn.commit()
-            print("Saving user details to a databases......")
+            print(f'Registering {fullname} as a Donor...')
         
     conn.close()
     
