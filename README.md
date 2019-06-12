@@ -151,3 +151,4 @@ Proposal URL:    --- https://www.donorschoose.org/project/penny-wars-fundraising
 * Handling donors api failed scenarios.
 * Creating more functions for standard code like - connect to the database and more.
 * Verifying school name before generating list.
+* Add valid comments in the code for useablility.
