@@ -60,7 +60,7 @@ def users_ops(options):
 
         conn.commit()
         
-        #Using prettytable module to list users from database
+        #Using prettytable module to list users from database.
         
         with conn:
             connect.execute('SELECT rowid as USERID,username as USERNAME,email as EMAIL,zipcode as ZIPCODE FROM USERS')   

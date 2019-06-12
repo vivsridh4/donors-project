@@ -13,14 +13,18 @@ from donors.config_file_handler import config_check
 
 def main(user,getprojects):
     if user:
-        #verify if config file has been updated with keys.
+        
+        #Verify if config file has been updated with keys.
+        
         is_config = config_check()
         if is_config:
             users_ops(user)
         else:
             print("Please add valid keys in config.ini")
     if getprojects:
-        #verify if config file has been updated with keys.
+        
+        #Verify if config file has been updated with keys.
+        
         is_config = config_check()
         if is_config:
             getprojectdetails(getprojects)
