@@ -8,7 +8,7 @@ from donors.config_file_handler import config_check
 
 @click.command()
 @click.option("--user","-u",help='donors cli project users operations: Create Users or List Users',type=click.Choice(['create', 'list']))
-@click.option("--getprojects","-gp",help='list all projects near user. Need valid USER ID as an argument which can be obtained by $donors -u list',type=int)
+@click.option("--getprojects","-gp",help='list all projects near user. Need valid USER ID as an argument which can be obtained by - donors --user list',type=int)
 
 
 def main(user,getprojects):

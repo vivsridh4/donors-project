@@ -90,7 +90,7 @@ The main commands supported by the Donors CLI are:
 * `donors --user list`   - Lists all users with name, email id & zip code to get USER ID for searching projects near user                              based on his zip code.
 * `donors --getprojects <USERID>` - Lists all projects near a user selected via *donors --user list* with google maps link.
 
-## Usage & Examples
+## Usage with examples
 
 * Create new user with the following command:
 
@@ -143,7 +143,7 @@ Proposal URL:    --- https://www.donorschoose.org/project/penny-wars-fundraising
 
 **NOTE:** Connect to "./db/test.db" by updating *config.ini* for some test data to play it.
 
-## Know Issues or bugs
+## Know issues in the app
 
 * Packaging CLI app as a CLI command using shell script and even further packaging it in a docker.
 * Handling empty or non availability of local data store.
