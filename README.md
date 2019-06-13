@@ -142,4 +142,4 @@ Proposal URL:    --- https://www.donorschoose.org/project/penny-wars-fundraising
 
 **NOTE:** Connect to "./db/test.db" by updating *config.ini* for some test data to play it.
 
-#### Access know issues here - [wiki](https://github.com/vivsridh4/donors-project/wiki/Bugs-&-Enhancements)
+##### Access know issues here - [wiki](https://github.com/vivsridh4/donors-project/wiki/Bugs-&-Enhancements)
