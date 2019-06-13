@@ -62,7 +62,6 @@ db_path = ./db/test.db
 Install app using the following command from donors-project directory:
 
 ```bash
-$ cd donors-project
 $ python3 setup.py install
 ```
 Verify installation using the following command:
