@@ -144,12 +144,4 @@ Proposal URL:    --- https://www.donorschoose.org/project/penny-wars-fundraising
 
 ## Know issues in the app
 
-* Packaging CLI app as a CLI command using shell script and even further packaging it in a docker.
-* Handling empty or non availability of local data store.
-* Handling google api failed scenarios - api fails to return a URL if school names not found.
-* Handling donors api failed scenarios.
-* Creating more functions for standard code like - connect to the database and more.
-* Verifying school name before generating list.
-* Add valid comments in the code for useablility.
-* Handling in-valid google api or donors api keys and verifying validity before using the CLI app.
-* Other option to get google place-id is to use gmaps.reverse_geocode((40.714224, -73.961452)) function and most effective only if Donors project data is accurate.
+Access know issues here - [wiki](https://github.com/vivsridh4/donors-project/wiki/Bugs-&-Enhancements)
