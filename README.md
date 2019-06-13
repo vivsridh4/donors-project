@@ -152,3 +152,4 @@ Proposal URL:    --- https://www.donorschoose.org/project/penny-wars-fundraising
 * Verifying school name before generating list.
 * Add valid comments in the code for useablility.
 * Handling in-valid google api or donors api keys and verifying validity before using the CLI app.
+* Other option to get google place-id is to use gmaps.reverse_geocode((40.714224, -73.961452)) function and most effective only if Donors project data is accurate.
