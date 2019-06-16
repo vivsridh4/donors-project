@@ -44,7 +44,7 @@ Update *config.ini* file with the following details:
 
 * Google Place API Key - To generate a new key, follow this [documentation.](https://developers.google.com/places/web-service/get-api-key)
 * Donors API Key - To generate a new key, follow this [documentation.](https://developers.google.com/places/web-service/get-api-key)
-* Database Path  - Create a local data store or use default path "./db/donors.db".
+* Database Path  - Create a local data store, for example "./db/donors.db".
 
 For example, update *config.ini* file as below:
 
