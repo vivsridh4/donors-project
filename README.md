@@ -97,7 +97,7 @@ The main commands supported by the Donors CLI are:
 $ donors --user create
 
 Please enter your full mame: Vivek Sridhar
-Please provide a valid email:vivsridh@gmail.com
+Please provide a valid email:vivsridh@abcde.com
 Please provide a valid zip code to search a project near user:560055
 Saving user details to a databases......
 ```
