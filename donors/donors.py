@@ -20,7 +20,7 @@ def main(user,getprojects):
         if is_config:
             users_ops(user)
         else:
-            print("Please add valid keys in config.ini")
+            print("Please add valid keys in config.ini to demo MSP's")
     if getprojects:
         
         #Verify if config file has been updated with keys.
