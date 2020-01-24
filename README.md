@@ -52,8 +52,8 @@ For example, update *config.ini* file as below:
 $ vi config.ini
 
 [KEYS]
-google_places_api_key = AIzaSyCBiC44AIzaSyCBiC44_AIzaSyCBiC44
-donors_api_key = ef4uef4ujef4uj
+google_places_api_key = ABCDEFGHIJK_LMNOPQoIY9
+donors_api_key = QWEASDFZXCV45QWE
 
 [DATABASE]
 db_path = ./db/test.db
@@ -97,7 +97,7 @@ The main commands supported by the Donors CLI are:
 $ donors --user create
 
 Please enter your full mame: Vivek Sridhar
-Please provide a valid email:vivsridh@gmail.com
+Please provide a valid email:vivsridh@abcde.com
 Please provide a valid zip code to search a project near user:560055
 Saving user details to a databases......
 ```
@@ -140,6 +140,6 @@ lng:             --- -73.91309729999999
 Proposal URL:    --- https://www.donorschoose.org/project/penny-wars-fundraising-supplies/4134999/?utm_source=api&utm_medium=feed&utm_content=bodylink&utm_campaign=ef4uju946azk
 ```
 
-**NOTE:** Connect to "./db/test.db" by updating *config.ini* for some test data to play it.
+**NOTE:** Connect to "./db/test.db" by updating *config.ini* for some test data to play with.
 
 #### Access know issues here - [wiki](https://github.com/vivsridh4/donors-project/wiki/Bugs-&-Enhancements)
