@@ -21,7 +21,7 @@ def main(user,getprojects):
             users_ops(user)
         else:
             print("Please add valid keys in config.ini")
-            #print("pycon India is awesome")
+            print("nice to see devops at microsoft reactor")
     if getprojects:
         
         #Verify if config file has been updated with keys.
