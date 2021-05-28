@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#test
+#testing
 
 """setup.py: setuptools control."""
 
