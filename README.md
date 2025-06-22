@@ -143,10 +143,10 @@ lng:             --- -73.91309729999999
 Proposal URL:    --- https://www.donorschoose.org/project/penny-wars-fundraising-supplies/4134999/?utm_source=api&utm_medium=feed&utm_content=bodylink&utm_campaign=ef4uju946azk
 ```
 <!-- GitAds-Verify: EI3BPYWRKS8318HG26OEOG2QJ1QFZ8Y1 -->
-## GitAds Sponsored
-[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=vivsridh4/donors-project@github)](https://gitads.dev/v1/ad-track?source=vivsridh4/donors-project@github)
 
 **NOTE:** Connect to "./db/test.db" by updating *config.ini* for some test data to play with.
 
 #### Access know issues here - [wiki](https://github.com/vivsridh4/donors-project/wiki/Bugs-&-Enhancements)
 
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=vivsridh4/donors-project@github)](https://gitads.dev/v1/ad-track?source=vivsridh4/donors-project@github)
