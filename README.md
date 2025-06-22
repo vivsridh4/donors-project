@@ -1,3 +1,6 @@
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=vivsridh4/donors-project@github)](https://gitads.dev/v1/ad-track?source=vivsridh4/donors-project@github)
+
 # donors-project
 
 <a href="https://docs.python.org/3/index.html"><img src="https://img.shields.io/badge/python-3.7-blue.svg"/></a>
