@@ -1,6 +1,3 @@
-## GitAds Sponsored
-[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=vivsridh4/donors-project@github)](https://gitads.dev/v1/ad-track?source=vivsridh4/donors-project@github)
-
 # donors-project
 
 <a href="https://docs.python.org/3/index.html"><img src="https://img.shields.io/badge/python-3.7-blue.svg"/></a>
@@ -146,7 +143,4 @@ Proposal URL:    --- https://www.donorschoose.org/project/penny-wars-fundraising
 
 **NOTE:** Connect to "./db/test.db" by updating *config.ini* for some test data to play with.
 
-#### Access know issues here - [wiki](https://github.com/vivsridh4/donors-project/wiki/Bugs-&-Enhancements)
-
-## GitAds Sponsored
-[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=vivsridh4/donors-project@github)](https://gitads.dev/v1/ad-track?source=vivsridh4/donors-project@github)
+#### Access known issues here - [wiki](https://github.com/vivsridh4/donors-project/wiki/Bugs-&-Enhancements)
